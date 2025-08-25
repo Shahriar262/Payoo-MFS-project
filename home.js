@@ -16,7 +16,6 @@ function getInputValueNum(id){
     return parseInt(document.getElementById('available-balance').innerText);
   }
 
-
 // add-money feature
 document.getElementById('btn-add-money').addEventListener('click', function(e){
  e.preventDefault();
@@ -40,7 +39,6 @@ document.getElementById('btn-add-money').addEventListener('click', function(e){
    alert('Please enter a valid amount');
    return;
 }
-
 
  const totalNewBalance = amount + availableBalance;
  document.getElementById('available-balance').innerText = totalNewBalance;
@@ -76,11 +74,44 @@ if(withdrawAmount > availableBalance){
    return;
 }
 
-
-
    const newBalance = availableBalance - withdrawAmount;
    document.getElementById('available-balance').innerText = newBalance;
 })
+
+//transfer feature
+const transferPin = 1234
+
+document.getElementById('btn-send-money').addEventListener('click', function(e){
+   e.preventDefault();
+   const userAccNum = document.getElementById('user-acc').value;
+   const transferAmount = getInputValueNum('transfer-amount');
+   const transferPinNum = getInputValueNum('transfer-pin');
+   const availableBalance = getInnerText('available-balance');
+
+   if(userAccNum.length < 11){
+      alert('Please provide valid User Account Number')
+      return;
+   }
+
+   if(transferPinNum !== transferPin){
+      alert('Please provide correct pin')
+      return;
+   }
+
+   if(isNaN(transferAmount) || transferAmount <= 0){
+   alert('Please enter a valid Transfer amount');
+   return;
+}
+
+if(transferAmount > availableBalance){
+   alert('Insufficient balance');
+   return;
+}
+
+   const newBalance = availableBalance - transferAmount;
+   document.getElementById('available-balance').innerText = newBalance;
+})
+
 // toggling feature
 
 document.getElementById('add-btn').addEventListener('click', function(){
