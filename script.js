@@ -9,8 +9,10 @@ document.getElementById('btn-login').addEventListener('click', function(e){
 
     const pinNumValue = document.getElementById('pin-num').value;
     const pinNumValueConverted = parseInt(pinNumValue)
-   
-    if(mobileNumValueConverted === mobileNum && pinNumValueConverted === pinNum){
+    if(mobileNumValue === '' && pinNumValue === ''){
+        alert('Please Enter Mobile number and Pin number')
+    }
+    else if(mobileNumValueConverted === mobileNum && pinNumValueConverted === pinNum){
         window.location.href="./home.html";
         
     }
