@@ -112,20 +112,38 @@ if(transferAmount > availableBalance){
    document.getElementById('available-balance').innerText = newBalance;
 })
 
+//get bonus feature
+document.getElementById('btn-get-bonus').addEventListener('click', function(e){
+   e.preventDefault();
+   const bonusAmount = getInputValueNum('bonus-coupon');
+   const availableBalance = getInnerText('available-balance');
+    const totalNewBonus = bonusAmount + availableBalance;
+ document.getElementById('available-balance').innerText = totalNewBonus;
+
+})
 // toggling feature
 
 document.getElementById('add-btn').addEventListener('click', function(){
    document.getElementById('cash-out-parent').style.display = 'none';
-   document.getElementById('transfer-parent').style.display = 'none'
+   document.getElementById('transfer-parent').style.display = 'none';
+   document.getElementById('get-bonus-parent').style.display = 'none';
    document.getElementById('add-money-parent').style.display = 'block';
 })
 document.getElementById('cash-out-btn').addEventListener('click', function(){
    document.getElementById('add-money-parent').style.display = 'none';
-   document.getElementById('transfer-parent').style.display = 'none'
+   document.getElementById('transfer-parent').style.display = 'none';
+   document.getElementById('get-bonus-parent').style.display = 'none';
    document.getElementById('cash-out-parent').style.display = 'block';
 })
 document.getElementById('transfer-btn').addEventListener('click', function(){
    document.getElementById('add-money-parent').style.display = 'none';
    document.getElementById('cash-out-parent').style.display = 'none';
+   document.getElementById('get-bonus-parent').style.display = 'none';
    document.getElementById('transfer-parent').style.display = 'block';
+})
+document.getElementById('bonus-btn').addEventListener('click', function(){
+   document.getElementById('add-money-parent').style.display = 'none';
+   document.getElementById('cash-out-parent').style.display = 'none';
+   document.getElementById('transfer-parent').style.display = 'none';
+   document.getElementById('get-bonus-parent').style.display = 'block';
 })

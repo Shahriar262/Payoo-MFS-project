@@ -50,7 +50,7 @@
         <img src="./assets/money1.png" class="mx-auto" alt="">
         <h2 class="mt-2 text-[#080808b3] text-[12.5px] md:text-[14px]">Transfer Money</h2>
       </div>
-      <div class="border-2 border-[#0808081a] text-center p-3 rounded-[12px] flex flex-col justify-center items-center h-[90px] hover:bg-[#0874f20d] hover:border-[#0874F2]">
+      <div id="bonus-btn" class="border-2 border-[#0808081a] text-center p-3 rounded-[12px] flex flex-col justify-center items-center h-[90px] hover:bg-[#0874f20d] hover:border-[#0874F2]">
         <img src="./assets/bonus1.png" class="mx-auto" alt="">
         <h2 class="mt-2 text-[#080808b3] text-[14px]">Get Bonus</h2>
       </div>
@@ -129,24 +129,35 @@
       <h1 class="text-[18px] font-semibold mt-[30px] mb-4">Transfer Money</h1>
       <form class="bg-white p-8 rounded-3xl">
 
-     <div>
-       <h1 class="mt-4 font-medium text-[#080808b3]">User Account Number</h1>
-       <input id="user-acc" type="text" class="bg-[#F4F5F7] mt-3 rounded-[32px] w-full h-[50px] font-light text-[#080808] pl-5 border-none" placeholder="Enter 11 digit number">
-     </div>
+      <div>
+        <h1 class="mt-4 font-medium text-[#080808b3]">User Account Number</h1>
+        <input id="user-acc" type="text" class="bg-[#F4F5F7] mt-3 rounded-[32px] w-full h-[50px] font-light text-[#080808] pl-5 border-none" placeholder="Enter 11 digit number">
+      </div>
 
-     <div>
-       <h1 class="mt-4 font-medium text-[#080808b3]">Amount</h1>
-       <input id="transfer-amount" type="text" class="bg-[#F4F5F7] mt-3 rounded-[32px] w-full h-[50px] font-light text-[#080808] pl-5 border-none" placeholder="Enter amount to transfer">
-     </div>
+      <div>
+        <h1 class="mt-4 font-medium text-[#080808b3]">Amount</h1>
+        <input id="transfer-amount" type="text" class="bg-[#F4F5F7] mt-3 rounded-[32px] w-full h-[50px] font-light text-[#080808] pl-5 border-none" placeholder="Enter amount to transfer">
+      </div>
 
-     <div>
-       <h1 class="mt-4 font-medium text-[#080808b3]">Pin Number</h1>
-       <input id="transfer-pin" type="text" class="bg-[#F4F5F7] mt-3 rounded-[32px] w-full h-[50px] font-light text-[#080808] pl-5 border-none" placeholder="Enter 4 digit pin number">
-     </div>
+      <div>
+        <h1 class="mt-4 font-medium text-[#080808b3]">Pin Number</h1>
+        <input id="transfer-pin" type="text" class="bg-[#F4F5F7] mt-3 rounded-[32px] w-full h-[50px] font-light text-[#080808] pl-5 border-none" placeholder="Enter 4 digit pin number">
+      </div>
 
-     <button class="btn bg-[#0874F2] text-white rounded-[32px] mt-4 w-full h-[50px] font-semibold text-[20px] border-none hover:bg-slate-500" id="btn-send-money">Send Now</button>
-  </form>
-    </div>
+      <button class="btn bg-[#0874F2] text-white rounded-[32px] mt-4 w-full h-[50px] font-semibold text-[20px] border-none hover:bg-slate-500" id="btn-send-money">Send Now</button>
+    </form>
+  </div>
+
+  <div id="get-bonus-parent">
+    <h1 class="text-[18px] font-semibold mt-[30px] mb-4">Get Bonus</h1>
+      <form class="bg-white p-8 rounded-3xl">
+       <div>
+         <h1 class="mt-4 font-medium text-[#080808b3]">Enter Bonus Coupon</h1>
+         <input id="bonus-coupon" type="text" class="bg-[#F4F5F7] mt-3 rounded-[32px] w-full h-[50px] font-light text-[#080808] pl-5 border-none" placeholder="Enter your coupon">
+       </div>
+       <button class="btn bg-[#0874F2] text-white rounded-[32px] mt-4 w-full h-[50px] font-semibold text-[20px] border-none hover:bg-slate-500" id="btn-get-bonus">Get Bonus</button>
+    </form>
+  </div>
 </div>
 
 
