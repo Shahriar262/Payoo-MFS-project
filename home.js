@@ -115,12 +115,18 @@ if(transferAmount > availableBalance){
 //get bonus feature
 document.getElementById('btn-get-bonus').addEventListener('click', function(e){
    e.preventDefault();
-   const bonusAmount = getInputValueNum('bonus-coupon');
-   const availableBalance = getInnerText('available-balance');
-    const totalNewBonus = bonusAmount + availableBalance;
- document.getElementById('available-balance').innerText = totalNewBonus;
 
-})
+   const coupon = document.getElementById('bonus-coupon').value;
+   const availableBalance = getInnerText('available-balance');
+
+   if(coupon === "BONUS"){
+       const newBalance = availableBalance + (availableBalance * 20 / 100);
+       document.getElementById('available-balance').innerText = newBalance;
+   } else {
+       alert("Invalid coupon code!");
+   }
+});
+
 // toggling feature
 
 document.getElementById('add-btn').addEventListener('click', function(){
