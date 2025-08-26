@@ -54,11 +54,11 @@
         <img src="./assets/bonus1.png" class="mx-auto" alt="">
         <h2 class="mt-2 text-[#080808b3] text-[14px]">Get Bonus</h2>
       </div>
-      <div class="border-2 border-[#0808081a] text-center p-3 rounded-[12px] flex flex-col justify-center items-center h-[90px] hover:bg-[#0874f20d] hover:border-[#0874F2]">
+      <div id="bill-btn" class="border-2 border-[#0808081a] text-center p-3 rounded-[12px] flex flex-col justify-center items-center h-[90px] hover:bg-[#0874f20d] hover:border-[#0874F2]">
         <img src="./assets/purse1.png" class="mx-auto" alt="">
         <h2 class="mt-2 text-[#080808b3] text-[14px]">Pay Bill</h2>
       </div>
-      <div class="border-2 border-[#0808081a] text-center p-3 rounded-[12px] flex flex-col justify-center items-center h-[90px] hover:bg-[#0874f20d] hover:border-[#0874F2]">
+      <div id="transaction-btn" class="border-2 border-[#0808081a] text-center p-3 rounded-[12px] flex flex-col justify-center items-center h-[90px] hover:bg-[#0874f20d] hover:border-[#0874F2]">
         <img src="./assets/transaction1.png" class="mx-auto" alt="">
         <h2 class="mt-2 text-[#080808b3] text-[14px]">Transactions</h2>
       </div>
@@ -148,6 +148,7 @@
     </form>
   </div>
 
+  <!-- get bonus -->
   <div id="get-bonus-parent">
     <h1 class="text-[18px] font-semibold mt-[30px] mb-4">Get Bonus</h1>
       <form class="bg-white p-8 rounded-3xl">
@@ -158,10 +159,44 @@
        <button class="btn bg-[#0874F2] text-white rounded-[32px] mt-4 w-full h-[50px] font-semibold text-[20px] border-none hover:bg-slate-500" id="btn-get-bonus">Get Bonus</button>
     </form>
   </div>
+  
+  <!-- pay bill -->
+   <div id="pay-bill-parent">
+    <h1 class="text-[18px] font-semibold mt-[30px] mb-4">Pay Bill</h1>
+    <form class="bg-white p-8 rounded-3xl">
+    <div>
+      <h1 class="font-medium text-[#080808b3]">Select To Pay</h1>
+      <select id="pay-bill" class="select text-[16px] bg-[#F4F5F7] mt-3 rounded-[32px] w-full h-[50px] border-none">
+        <option disabled selected>Select back</option>
+        <option>Gas Bill</option>
+        <option>Electricity Bill</option>
+        <option>Water Bill</option>
+      </select>
+    </div>
+
+    <div>
+      <h1 class="mt-4 font-medium text-[#080808b3]">Biller Account Number</h1>
+      <input id="biller-acc-num" type="text" class="bg-[#F4F5F7] mt-3 rounded-[32px] w-full h-[50px] font-light text-[#080808] pl-5 border-none" placeholder="Enter account number">
+    </div>
+
+    <div>
+      <h1 class="mt-4 font-medium text-[#080808b3]">Amount to Pay</h1>
+      <input id="bill-amount" type="text" class="bg-[#F4F5F7] mt-3 rounded-[32px] w-full h-[50px] font-light text-[#080808] pl-5 border-none" placeholder="Add Amount to Pay">
+    </div>
+
+    <div>
+      <h1 class="mt-4 font-medium text-[#080808b3]">Pin Number</h1>
+      <input id="pay-bill-pin" type="text" class="bg-[#F4F5F7] mt-3 rounded-[32px] w-full h-[50px] font-light text-[#080808] pl-5 border-none" placeholder="Enter 4 digit pin number">
+    </div>
+
+    <button class="btn bg-[#0874F2] text-white rounded-[32px] mt-4 w-full h-[50px] font-semibold text-[20px] border-none hover:bg-slate-500" id="btn-pay-bill">Pay Now</button>
+  </form>
+  </div>
 </div>
 
 
 
+ 
    <script src="home.js"></script>
 </body>
 </html>
